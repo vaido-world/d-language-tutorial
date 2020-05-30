@@ -1,5 +1,5 @@
 /*
-	This code search and find occurences in files.
+	This code search and find occurences in a file.
 
 */
 
