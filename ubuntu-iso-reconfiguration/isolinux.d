@@ -10,7 +10,6 @@ void main(){
 
 	auto file = File("E:/isolinux/isolinux.cfg");
 	
-	int found = 0;
 	int lineNumber = 0;
 	char[][int] array;
 	
@@ -26,11 +25,9 @@ void main(){
 		if (line == "default live" && (line[0] != '#')) {
 			writeln("[", lineNumber, ".] ", line);
 			array[lineNumber] ~= line;
-			found++;
 			writeln("     Isolinux is already set to boot directly to a live session");
 		} else if (line.findSplit("default") && (line[0] != '#')){
 			writeln("[", lineNumber, ".] ", line);
-			found++;
 			array[lineNumber] ~= line;
 			writeln("     A duplicate default option is found.");
 		} else {
