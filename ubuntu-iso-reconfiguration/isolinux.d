@@ -12,9 +12,8 @@ void main(){
 	
 	int found = 0;
 	int lineNumber = 0;
-	string[int] array;
-	array[array.length]="ssdkf";
-	array[array.length]="sdf";
+	char[][int] array;
+	
 	//array ~= "haha";
 	writeln(array);
 	/*
@@ -26,6 +25,7 @@ void main(){
 		
 		if (line == "default live" && (line[0] != '#')) {
 			writeln("[", lineNumber, ".] ", line);
+			array[lineNumber] = line;
 			found++;
 			writeln("     Isolinux is already set to boot directly to a live session");
 		} else if (line.findSplit("default") && (line[0] != '#')){
@@ -40,7 +40,7 @@ void main(){
 	
 	
 	file.close();
-	
+	writeln(array);
 	writeln("Occurrences: ", found);
 	if ( found > 1){
 		writeln("There is a conflict.");
