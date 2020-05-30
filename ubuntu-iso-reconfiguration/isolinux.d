@@ -15,7 +15,7 @@ void main(){
 	char[][int] array;
 	
 	//array ~= "haha";
-	writeln(array);
+
 	/*
 	array ~= [1];
 	array ~= [[1, "456"]];
@@ -25,7 +25,7 @@ void main(){
 		
 		if (line == "default live" && (line[0] != '#')) {
 			writeln("[", lineNumber, ".] ", line);
-			array[lineNumber] = line;
+			array[lineNumber] ~= line;
 			found++;
 			writeln("     Isolinux is already set to boot directly to a live session");
 		} else if (line.findSplit("default") && (line[0] != '#')){
