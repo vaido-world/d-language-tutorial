@@ -24,6 +24,7 @@ auto file = File("E:/isolinux/isolinux.cfg");
 		} else if (line.findSplit("default") && (line[0] != '#')){
 			writeln("[", lineNumber, ".] ", line);
 			found++;
+			writeln("     A duplicate default option is found.");
 		} else {
 			writeln(lineNumber, ". ", line);
 		}
