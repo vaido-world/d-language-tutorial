@@ -8,7 +8,7 @@ import std.algorithm.searching : findSplit;
 
 void main(){
 
-	auto file = File("E:/isolinux/isolinux.cfg");
+	auto file = File("I:/isolinux/isolinux.cfg");
 	
 	int lineNumber = 0;
 	char[][int] array;
@@ -42,8 +42,12 @@ void main(){
 	writeln("Occurrences: ", array.length);
 	if ( array.length > 1){
 		writeln("There is a conflict.");
+
+		
 	}
-	
+			foreach (index, item; array) {
+			writeln(index, ". ", item);
+		}
 	//Autoresolve other conflicting default options by commenting them.
 	//Saving their previous state would be great
 
