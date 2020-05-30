@@ -13,13 +13,6 @@ void main(){
 	int lineNumber = 0;
 	char[][int] array;
 	
-	//array ~= "haha";
-
-	/*
-	array ~= [1];
-	array ~= [[1, "456"]];
-	*/
-
 	foreach (line ; file.byLine) {
 		
 		if (line == "default live" && (line[0] != '#')) {
@@ -47,9 +40,9 @@ void main(){
 		writeln("  A duplicate default option is found.");
 		
 	}
-			foreach (index, item; array) {
-			writeln("    ", index, ". ", item);
-		}
+	foreach (index, item; array) {
+		writeln("    ", index, ". ", item);
+	}
 	//Autoresolve other conflicting default options by commenting them.
 	//Saving their previous state would be great
 
