@@ -8,7 +8,7 @@ import std.algorithm.searching : findSplit;
 
 void main(){
 
-	auto file = File("I:/isolinux/isolinux.cfg");
+	auto file = File("E:/isolinux/isolinux.cfg");
 	
 	int lineNumber = 0;
 	char[][int] array;
@@ -52,8 +52,8 @@ void main(){
 	writeln("CURRENT DEBUG");
 	writeln("  ", rawfileInArray);
 	writeln;
-	foreach (index, item; rawfileInArray) {
-		writeln("    ", index, ". ", item);
+	foreach (content; rawfileInArray.byKeyValue) {
+		writeln("    ", content.key, ". ", content.value);
 	}
 	//Autoresolve other conflicting default options by commenting them.
 	//Saving their previous state would be great
