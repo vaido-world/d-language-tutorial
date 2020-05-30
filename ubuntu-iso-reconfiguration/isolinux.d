@@ -20,6 +20,7 @@ auto file = File("E:/isolinux/isolinux.cfg");
 		if (line == "default live"){
 			writeln("[", lineNumber, ".] ", line);
 			found++;
+			writeln("     Isolinux is already set to boot directly to a live session");
 		} else if (line.findSplit("default") &&  (line[0] != '#')){
 			writeln("[", lineNumber, ".] ", line);
 			found++;
