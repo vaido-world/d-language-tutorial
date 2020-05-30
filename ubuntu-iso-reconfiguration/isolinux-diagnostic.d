@@ -43,6 +43,9 @@ void main(){
 	if ( array.length > 1){
 		writeln("There is a conflict.");
 	}
+	
+	//Autoresolve other conflicting default options by commenting them.
+	//Saving their previous state would be great
 
 	
 
