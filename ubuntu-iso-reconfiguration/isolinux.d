@@ -17,11 +17,11 @@ auto file = File("E:/isolinux/isolinux.cfg");
 	foreach (line ; file.byLine) {
 	
 	
-		if (line == "default live"){
+		if (line == "default live" && (line[0] != '#')) {
 			writeln("[", lineNumber, ".] ", line);
 			found++;
 			writeln("     Isolinux is already set to boot directly to a live session");
-		} else if (line.findSplit("default") &&  (line[0] != '#')){
+		} else if (line.findSplit("default") && (line[0] != '#')){
 			writeln("[", lineNumber, ".] ", line);
 			found++;
 		} else {
