@@ -1,3 +1,8 @@
+/*
+	This code searche and find occurences in files.
+
+*/
+
 import std.stdio, std.regex;
 import std.algorithm.searching : findSplit;
 
