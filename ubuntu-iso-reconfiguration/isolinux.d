@@ -42,8 +42,8 @@ void main(){
 	
 	file.close();
 	writeln(array);
-	writeln("Occurrences: ", found);
-	if ( found > 1){
+	writeln("Occurrences: ", array.length);
+	if ( array.length > 1){
 		writeln("There is a conflict.");
 	}
 
