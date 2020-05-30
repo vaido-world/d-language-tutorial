@@ -61,12 +61,3 @@ void main(){
 	
 
 }
-
-/*
-	string textLine = "  dd Hello World !";
-	auto ss = split(textLine, regex(` `));
-	ss.length.writeln;
-	write("--");
-	ss[2].write;
-	write("--");
-	*/
