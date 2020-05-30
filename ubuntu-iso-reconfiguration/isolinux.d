@@ -1,5 +1,5 @@
 /*
-	This code search and find occurences in a file.
+	This code searche and find occurences in files.
 
 */
 
@@ -29,6 +29,9 @@ auto file = File("E:/isolinux/isolinux.cfg");
 		lineNumber++;
 	}
 	writeln("Occurences: ", found);
+	if ( found > 1){
+		writeln("There is a conflict.");
+	}
 
 	file.close();
 
