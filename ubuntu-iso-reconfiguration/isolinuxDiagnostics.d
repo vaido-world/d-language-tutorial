@@ -12,8 +12,10 @@ void main(){
 	
 	int lineNumber = 0;
 	char[][int] array;
+	char[][int] rawfile;
 	
 	foreach (line ; file.byLine) {
+
 		
 		if (line == "default live" && (line[0] != '#')) {
 			writeln("[", lineNumber, ".] ", line);
@@ -27,6 +29,7 @@ void main(){
 			writeln(lineNumber, ". ", line);
 		}
 		lineNumber++;
+		rawfile[lineNumber] ~= line;
 	}
 	
 	
@@ -41,6 +44,15 @@ void main(){
 		
 	}
 	foreach (index, item; array) {
+		writeln("    ", index, ". ", item);
+	}
+	
+	
+	writeln;
+	writeln("CURRENT DEBUG");
+	writeln("  ", rawfile);
+	writeln;
+	foreach (index, item; rawfile) {
 		writeln("    ", index, ". ", item);
 	}
 	//Autoresolve other conflicting default options by commenting them.
