@@ -31,6 +31,7 @@ void main(){
 		} else if (line.findSplit("default") && (line[0] != '#')){
 			writeln("[", lineNumber, ".] ", line);
 			found++;
+			array[lineNumber] ~= line;
 			writeln("     A duplicate default option is found.");
 		} else {
 			writeln(lineNumber, ". ", line);
