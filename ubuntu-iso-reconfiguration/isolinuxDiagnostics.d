@@ -29,7 +29,7 @@ void main(){
 		} else if (line.findSplit("default") && (line[0] != '#')){
 			writeln("[", lineNumber, ".] ", line);
 			array[lineNumber] ~= line;
-			writeln("     A duplicate default option is found.");
+			writeln("     Current default");
 		} else {
 			writeln(lineNumber, ". ", line);
 		}
@@ -38,15 +38,17 @@ void main(){
 	
 	
 	file.close();
-	writeln(array);
+	writeln("____________________________");
+	writeln("Development information");
+	writeln("  ", array);
 	writeln("Occurrences: ", array.length);
 	if ( array.length > 1){
-		writeln("There is a conflict.");
-
+		writeln("  There is a conflict.");
+		writeln("  A duplicate default option is found.");
 		
 	}
 			foreach (index, item; array) {
-			writeln(index, ". ", item);
+			writeln("    ", index, ". ", item);
 		}
 	//Autoresolve other conflicting default options by commenting them.
 	//Saving their previous state would be great
