@@ -12,7 +12,7 @@ void main(){
 	
 	int lineNumber = 0;
 	char[][int] array;
-	char[][int] rawfile;
+	char[][int] rawfileInArray;
 	
 	foreach (line ; file.byLine) {
 
@@ -29,7 +29,7 @@ void main(){
 			writeln(lineNumber, ". ", line);
 		}
 		lineNumber++;
-		rawfile[lineNumber] ~= line;
+		rawfileInArray[lineNumber] ~= line;
 	}
 	
 	
@@ -50,9 +50,9 @@ void main(){
 	
 	writeln;
 	writeln("CURRENT DEBUG");
-	writeln("  ", rawfile);
+	writeln("  ", rawfileInArray);
 	writeln;
-	foreach (index, item; rawfile) {
+	foreach (index, item; rawfileInArray) {
 		writeln("    ", index, ". ", item);
 	}
 	//Autoresolve other conflicting default options by commenting them.
@@ -61,3 +61,12 @@ void main(){
 	
 
 }
+
+/*
+	string textLine = "  dd Hello World !";
+	auto ss = split(textLine, regex(` `));
+	ss.length.writeln;
+	write("--");
+	ss[2].write;
+	write("--");
+	*/
