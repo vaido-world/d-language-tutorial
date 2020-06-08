@@ -15,3 +15,5 @@ Uncomment the line that was commented with custom identifier.
 Parse a text line string
 Change word 
 Return changed text line with the initial whitespace/formatting
+
+Parse file by words.
