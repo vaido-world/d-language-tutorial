@@ -17,3 +17,7 @@ Change word
 Return changed text line with the initial whitespace/formatting
 
 Parse file by words.
+
+
+Finding out how many whitespaces were left before meeting the token.
+Check Token word count
